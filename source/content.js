@@ -58,6 +58,7 @@ import extendIssueStatusLabel from './features/extend-issue-status-label';
 import highlightClosingPrsInOpenIssues from './features/highlight-closing-prs-in-open-issues';
 import toggleAllThingsWithAlt from './features/toggle-all-things-with-alt';
 import addJumpToBottomLink from './features/add-jump-to-bottom-link';
+import addCommentOnTaskClick from './features/add-comment-on-task-click';
 import addQuickReviewButtons from './features/add-quick-review-buttons';
 import extendDiffExpander from './features/extend-diff-expander';
 import sortIssuesByUpdateTime from './features/sort-issues-by-update-time';
@@ -224,6 +225,7 @@ function ajaxedPagesHandler() {
 
 	if (pageDetect.isIssue() || pageDetect.isPRConversation()) {
 		enableFeature(addJumpToBottomLink);
+		enableFeature(addCommentOnTaskClick);
 	}
 
 	if (pageDetect.isPRList() || pageDetect.isIssueList()) {
