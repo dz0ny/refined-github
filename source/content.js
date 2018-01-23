@@ -71,6 +71,7 @@ import closeOutOfViewModals from './features/close-out-of-view-modals';
 import addScopedSearchOnUserProfile from './features/add-scoped-search-on-user-profile';
 import monospaceTextareas from './features/monospace-textareas';
 import improveShortcutHelp from './features/improve-shortcut-help';
+import viewInZenHub from './features/view-in-zenhub';
 
 import * as pageDetect from './libs/page-detect';
 import {safeElementReady, enableFeature} from './libs/utils';
@@ -226,6 +227,7 @@ function ajaxedPagesHandler() {
 	if (pageDetect.isIssue() || pageDetect.isPRConversation()) {
 		enableFeature(addJumpToBottomLink);
 		enableFeature(addCommentOnTaskClick);
+		enableFeature(viewInZenHub);
 	}
 
 	if (pageDetect.isPRList() || pageDetect.isIssueList()) {
