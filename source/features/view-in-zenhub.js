@@ -10,19 +10,4 @@ export default function () {
 		View in ZenHub
 		</a>
 	);
-	select('#partial-discussion-header .gh-header-actions').prepend(
-		<a href={`https://app.zenhub.com/workspace/o/${pageDetect.getCleanPathname()}`} class="btn btn-sm float-left" target="_blank">
-			To Backlog
-		</a>
-	);
-	select('#partial-discussion-header .gh-header-actions').prepend(
-		<a href={`https://app.zenhub.com/workspace/o/${pageDetect.getCleanPathname()}`} class="btn btn-sm float-left" target="_blank">
-			To Review
-		</a>
-	);
-	select('#partial-discussion-header .gh-header-actions').prepend(
-		<a href={`https://app.zenhub.com/workspace/o/${pageDetect.getCleanPathname()}`} class="btn btn-sm float-left" target="_blank">
-			In progress
-		</a>
-	);
 }

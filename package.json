@@ -6,8 +6,8 @@
 		"test": "npm run lint && cross-env BABEL_ENV=testing ava && run-s build",
 		"build": "webpack --mode=production",
 		"watch": "webpack --mode=development --watch",
-		"release:amo": "cd distribution && webext submit",
-		"release:cws": "cd distribution && webstore upload --auto-publish",
+		"release:fx": "web-ext sign -s distribution -a ./",
+		"release:ch": "crx pack distribution -p key.pem -o scrum_github.crx",
 		"release": "run-s build update-version save-url release:*",
 		"save-url": "echo https://github.com/$TRAVIS_REPO_SLUG/tree/$TRAVIS_COMMIT > distribution/SOURCE_URL",
 		"update-version": "VERSION=$(utc-version); echo $VERSION; dot-json distribution/manifest.json version $VERSION",
@@ -15,6 +15,7 @@
 	},
 	"dependencies": {
 		"copy-text-to-clipboard": "^1.0.3",
+		"crx": "^3.2.1",
 		"debounce-fn": "^1.0.0",
 		"delegate": "^3.2.0",
 		"dom-chef": "^3.0.0",

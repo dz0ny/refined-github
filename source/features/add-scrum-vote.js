@@ -5,27 +5,30 @@ import { h } from 'dom-chef';
 
 
 export default function () {
-	select('.timeline-new-comment .timeline-comment .toolbar-commenting div:nth-child(4)').prepend(
-		<div class="toolbar-item dropdown js-menu-container">
-			<button type="button" tabindex="-1" class="js-menu-target menu-target tooltipped tooltipped-n" aria-label="Add vote" aria-expanded="false" aria-haspopup="true">
-				🕛&nbsp;
+	const toolbar = select('.timeline-new-comment .timeline-comment .toolbar-commenting div:nth-child(4)')
+	if (toolbar) {
+		toolbar.prepend(
+			<div class="toolbar-item dropdown js-menu-container">
+				<button type="button" tabindex="-1" class="js-menu-target menu-target tooltipped tooltipped-n" aria-label="Add vote" aria-expanded="false" aria-haspopup="true">
+					🕛&nbsp;
 					<span class="dropdown-caret"></span>
-			</button>
+				</button>
 
-			<div class="dropdown-menu-content js-menu-content">
-				<ul class="dropdown-menu dropdown-menu-s">
-					<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 1</details>">1️⃣</button>
-					<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 2</details>">2️⃣</button>
-					<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 3</details>">3️⃣</button>
-					<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 5</details>">5️⃣</button>
-					<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 8</details>">8️⃣</button>
-					<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 13</details>">1️⃣3️⃣</button>
-					<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 20</details>">2️⃣0️⃣</button>
-					<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 100</details>">1️⃣0️⃣0️⃣</button>
-				</ul>
+				<div class="dropdown-menu-content js-menu-content">
+					<ul class="dropdown-menu dropdown-menu-s">
+						<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 1</details>">1️⃣</button>
+						<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 2</details>">2️⃣</button>
+						<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 3</details>">3️⃣</button>
+						<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 5</details>">5️⃣</button>
+						<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 8</details>">8️⃣</button>
+						<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 13</details>">1️⃣3️⃣</button>
+						<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 20</details>">2️⃣0️⃣</button>
+						<button type="button" class="js-toolbar-item dropdown-item btn-vote-scrum" data-prefix="<details><summary>Click to see estimation</summary>SP: 100</details>">1️⃣0️⃣0️⃣</button>
+					</ul>
+				</div>
 			</div>
-		</div>
-	);
+		);
+	}
 	const header = select('h1.gh-header-title')
 	if (header && header.innerHTML.indexOf("[vote]") === -1){
 		for (const summary of select.all(`.comment-body details summary`)) {

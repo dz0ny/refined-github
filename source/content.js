@@ -74,6 +74,7 @@ import improveShortcutHelp from './features/improve-shortcut-help';
 import viewInZenHub from './features/view-in-zenhub';
 import addUserStories from './features/add-user-stories';
 import addSCRUM from './features/add-scrum-vote';
+import addSprint from './features/sprint';
 
 import * as pageDetect from './libs/page-detect';
 import {safeElementReady, enableFeature} from './libs/utils';
@@ -147,6 +148,7 @@ function onDomReady() {
 	enableFeature(improveShortcutHelp);
 	enableFeature(addUserStories);
 	enableFeature(addSCRUM);
+	enableFeature(addSprint);
 
 	if (!pageDetect.isGist()) {
 		enableFeature(moveMarketplaceLinkToProfileDropdown);
