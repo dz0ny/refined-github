@@ -73,6 +73,7 @@ import monospaceTextareas from './features/monospace-textareas';
 import improveShortcutHelp from './features/improve-shortcut-help';
 import viewInZenHub from './features/view-in-zenhub';
 import addUserStories from './features/add-user-stories';
+import addSCRUM from './features/add-scrum-vote';
 
 import * as pageDetect from './libs/page-detect';
 import {safeElementReady, enableFeature} from './libs/utils';
@@ -145,6 +146,7 @@ function onDomReady() {
 	enableFeature(closeOutOfViewModals);
 	enableFeature(improveShortcutHelp);
 	enableFeature(addUserStories);
+	enableFeature(addSCRUM);
 
 	if (!pageDetect.isGist()) {
 		enableFeature(moveMarketplaceLinkToProfileDropdown);

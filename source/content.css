@@ -971,3 +971,54 @@ body > .footer li a {
 	background: #9c95b3;
 	cursor: pointer;
 }
+.btn-vote-scrum{
+	width: 80%;
+	margin: 0.5em;
+	padding: 0.3em;
+    font-size: 1em;
+}
+.btn-vote-scrum:hover{
+	background-color: #0366d6!important;
+}
+
+.comment-body details.scrum-sp {
+	visibility: hidden;
+	padding: 0;
+    margin: 0;
+	height: 3em;
+}
+
+.voting .comment-body details.scrum-sp{
+	filter: blur(8px);
+}
+
+details.scrum-sp:before {
+	font-size: 2em;
+	visibility:visible;
+}
+
+details.scrum-sp.sp-1:before {
+	content: '1️⃣';
+}
+details.scrum-sp.sp-2:before {
+	content: '2️⃣';
+}
+details.scrum-sp.sp-3:before {
+	content: '3️⃣';
+}
+details.scrum-sp.sp-5:before {
+	content: '5️⃣';
+}
+details.scrum-sp.sp-8:before {
+	content: '8️⃣';
+}
+details.scrum-sp.sp-13:before {
+	content: '1️⃣3️⃣';
+}
+details.scrum-sp.sp-20:before {
+	content: '2️⃣0️⃣';
+}
+details.scrum-sp.sp-100:before {
+	content: '1️⃣0️⃣0️⃣';
+}
+

@@ -1,13 +1,13 @@
 {
-	"name": "Refined GitHub",
+	"name": "Scrum GitHub",
 	"version": "0.0.0",
 	"description": "Simplifies the GitHub interface and adds useful features",
-	"homepage_url": "https://github.com/sindresorhus/refined-github",
+	"homepage_url": "https://github.com/dz0ny/scrum-github",
 	"manifest_version": 2,
 	"minimum_chrome_version": "58",
 	"applications": {
 		"gecko": {
-			"id": "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}",
+			"id": "{8cc5e7c1-d7cb-4a27-9c4e-d014cbdbdc3f}",
 			"strict_min_version": "55.0"
 		}
 	},
